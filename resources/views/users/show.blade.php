@@ -17,6 +17,7 @@
                 <li role="presentation" class="{{ Request::is('users/' . $user->id) ? 'active' : '' }}"><a href="{{ route('users.show', ['id' => $user->id]) }}">TimeLine <span class="badge">{{ $count_microposts }}</span></a></li>
                 <li><a href="#">Followings</a></li>
                 <li><a href="#">Followers</a></li>
+                <li><a href="#">Favorites</a></li>
             </ul>
             @if (Auth::user()->id == $user->id)
                   {!! Form::open(['route' => 'microposts.store']) !!}
